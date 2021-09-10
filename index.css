@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background: linear-gradient(to left,rgb(53, 46, 53),rgb(42, 18, 48),rgb(49, 2, 47));
+min-height: 100vh;
+max-width: 1300px;
+display: flex;
+align-items: center;
+}
+body::after{
+    content: ' ';
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+    background: linear-gradient(to left,rgb(29, 27, 29),rgb(212, 12, 39),rgb(223, 156, 13));
+    clip-path: circle(20% at 90% 80%);
+    }
+    body::before{
+        content: ' ';
+    position: absolute;
+ top: 0;
+   right: 0;
+    height: 100%;
+    width: 100%;
+        background: linear-gradient(to left,rgb(86, 107, 7),rgb(182, 104, 115),rgb(223, 156, 13));
+        clip-path: circle(20% at 10% 10%);
+        }
+        .bloc{
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+        .carte{
+            position: relative; 
+width: 23%;
+height: 450px;
+background-color: rgba(255, 255, 255, 0.1);
+display: flex;
+align-items: center;
+box-shadow: .2em .2em rgb(20, 20, 20), -.1em 0 .4em rgb(58, 54, 54);
+border-radius: 10px;
+        }
+        .carte .content{
+      color: white;
+           padding:  20px;
+           font-size: 1em;
+           transform: translateY(100px);
+           opacity: 0;
+           transition: all 2s;
+        }
+        .carte:hover .content{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .carte .content h2{
+            position: absolute;
+            top: 0;
+            right: 0;
+          
+            font-size: 12em;
+           opacity: 0.1;
+        }
+        .carte .content h1{
+            text-align: center;
+        }
+        .carte .content p{
+        margin: 15px auto;
+        }
+        .carte .content a{
+            background-color: white;
+            border-radius: 8px;
+        display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            color: rgb(8, 8, 8);
+            text-decoration: none;
+            font-size: 1.8;
+            text-align: center;
+        }
